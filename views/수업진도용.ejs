@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { color:red;}
+    </style>
+</head>
+<body>
+    <!-- ejs tag 사용시  %기호뒤에 -가 붙는 형태는
+         데이터 출력시 사용함
+
+         - 기호가 붙지않는 형태는 자바스크립트의 제어문, 변수생성 같은
+         작업할 때 사용
+    -->
+    <% let a = 30; %>
+    <% let b = "box"; %>
+
+    <% const userId = "test" %>
+
+    <% if(userId !== "admin") { %>
+    <ul>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+    </ul>
+    <% } else { %>
+    <ul>
+        <li><a href="#">관리자메뉴</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+    <% } %>
+
+
+    <% 
+        const menuList = ["메뉴1","메뉴2","메뉴3"];
+        const menuDetail = [
+        {
+            name:"메뉴입니다1",
+            link:"/"
+        },
+        {
+            name:"메뉴입니다2",
+            link:"/sub"
+        },
+        {
+            name:"메뉴입니다3",
+            link:"/intro"
+        }];
+    %>
+
+    <% for(let i=0; i<menuDetail.length; i++) {%>
+        <div>
+            <h2>박스리스트들</h2>
+            <a href="<%- menuDetail[i].link %>"><%- menuDetail[i].name %></a>
+        </div>
+    <% }%>
+
+
+    <ul>
+        <% menuList.forEach((el,index) => { %>    
+            <li><%- el %></li>
+        <% }) %>
+    </ul>
+
+
+    <div class="title <%- b %>"><%- a %></div>
+
+   
+
+
+</body>
+</html>

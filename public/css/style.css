@@ -1,0 +1,27 @@
+#header {
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+#header.sub {
+  background-color: yellow;
+}
+#header.sub .center .gnb li a {
+  color: red;
+}
+#header .center {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+#header .center .gnb {
+  display: flex;
+}
+#header .center .gnb > li {
+  margin: 0 20px;
+}
+
+#container .mainContainer {
+  height: 500px;
+  background-color: pink;
+}

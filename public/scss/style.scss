@@ -1,0 +1,33 @@
+#header { 
+    display:flex;
+    justify-content:center;
+    background-color:aqua;
+    &.sub {
+        background-color:yellow;
+        .center{
+            .gnb {
+                li{
+                    a { color:red;}
+                }
+            }
+        }
+    }
+    .center{
+        width:1000px;
+        display:flex;
+        justify-content:space-between;
+        .gnb {
+            display:flex;
+            > li {
+                margin:0 20px;
+            }
+        }
+    }
+}
+
+#container {
+    .mainContainer {
+        height:500px;
+        background-color:pink;
+    }
+}

@@ -1,0 +1,15 @@
+
+    <div id="footer">
+        <div class="center">하단영역입니다</div>
+    </div>
+    
+    <!-- 조건문으로 보내준 데이터의 갯수가 1개 이상일 때-->
+    <!-- 반복문으로 <script> 태그를 해당 갯수만큼 만들어줌 -->
+    <% if(jsFiles.length !== 0) { %>
+         <% jsFiles.forEach((items,index)=>{ %>
+             <script src="/js/<%- items %>"></script>
+         <% }) %>
+    <% } %>
+
+</body>
+</html>

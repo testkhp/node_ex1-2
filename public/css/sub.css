@@ -1,0 +1,5 @@
+#container .subContainer { 
+    height:600px;
+    background-color:pink;
+}
+/*반응형까지도 가능*/
